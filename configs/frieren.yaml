@@ -1,0 +1,30 @@
+# Charakter-Config: Frieren (Sousou no Frieren)
+
+character:
+  name: "frieren"
+  booru_tag: "frieren"
+  source: "danbooru"
+
+collection:
+  # Rating breakdown (2026-07-26): general 8966 (57%), sensitive 3010 (19%),
+  # questionable 1481 (9%), explicit 2345 (15%) of 15802 total -- ~24%
+  # questionable/explicit.
+  ratings: ["general", "sensitive"]
+  min_short_side: 768
+  exclude_tags: ["photo", "cosplay", "real"]
+  max_character_count: 1
+
+captioning:
+  leading_tag: "frieren"
+  tag_dropout_prob: 0.1
+
+training:
+  resolution_area: 1048576 # ~1024x1024
+  rank: 16
+  alpha: 16
+  learning_rate: 1.0e-4
+  batch_size: 1
+  gradient_accumulation_steps: 4
+  weighting_scheme: "logit_normal"
+  checkpoint_every_steps: 250
+  drive_checkpoint_dir: "/content/drive/MyDrive/charlora/outputs/frieren"

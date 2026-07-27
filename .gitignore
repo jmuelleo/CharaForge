@@ -1,0 +1,15 @@
+/data/
+/outputs/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+.venv/
+venv/

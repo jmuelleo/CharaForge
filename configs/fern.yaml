@@ -1,0 +1,30 @@
+# Charakter-Config: Fern (Sousou no Frieren)
+
+character:
+  name: "fern"
+  booru_tag: "fern_(sousou_no_frieren)"
+  source: "danbooru"
+
+collection:
+  # Rating breakdown (2026-07-26): general 3674 (39%), sensitive 2335 (25%),
+  # questionable 1379 (14%), explicit 2125 (22%) of 9513 total -- ~36%
+  # questionable/explicit.
+  ratings: ["general", "sensitive"]
+  min_short_side: 768
+  exclude_tags: ["photo", "cosplay", "real"]
+  max_character_count: 1
+
+captioning:
+  leading_tag: "fern_(sousou_no_frieren)"
+  tag_dropout_prob: 0.1
+
+training:
+  resolution_area: 1048576 # ~1024x1024
+  rank: 16
+  alpha: 16
+  learning_rate: 1.0e-4
+  batch_size: 1
+  gradient_accumulation_steps: 4
+  weighting_scheme: "logit_normal"
+  checkpoint_every_steps: 250
+  drive_checkpoint_dir: "/content/drive/MyDrive/charlora/outputs/fern"
