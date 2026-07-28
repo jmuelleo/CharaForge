@@ -15,6 +15,7 @@ def load_pipeline(model_id = "lodestones/Chroma1-HD"):
                                           torch_dtype = torch.bfloat16)
     pipe = pipe.to("cuda")
     pipe.vae.to(torch.float32)
+    pipe.vae.config.force_upcast = True
     pipe.enable_vae_slicing()
     pipe.enable_vae_tiling()
     return pipe
